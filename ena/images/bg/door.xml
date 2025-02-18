@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="door.png" width="488" height="3695">
+	<SubTexture name="close0000" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0000" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0001" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0002" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0003" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0004" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0005" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0006" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0007" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0008" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0009" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0010" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0011" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0012" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0013" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0014" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0015" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0016" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0017" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0018" x="1" y="3169" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="door0019" x="1" y="3169" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0000" x="1" y="3169" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0001" x="1" y="3169" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+ 	<SubTexture name="doornt0002" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0003" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0004" x="1" y="2641" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0005" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0006" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0007" x="1" y="2113" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0008" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0009" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0010" x="1" y="1585" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0011" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0012" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0013" x="1" y="1057" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>	
+	<SubTexture name="doornt0014" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0015" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0016" x="1" y="529" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0017" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0018" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+	<SubTexture name="doornt0019" x="1" y="1" width="486" height="525" frameX="-0" frameY="-0" frameWidth="497" frameHeight="525"/>
+</TextureAtlas>

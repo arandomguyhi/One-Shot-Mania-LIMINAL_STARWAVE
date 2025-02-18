@@ -1,0 +1,7 @@
+<TextureAtlas width="987" imagePath="credits.png" height="186">
+	<SubTexture x="229" frameWidth="213" y="1" frameX="-4" name="DozenRahyz0000" frameHeight="185" frameY="-11" width="210" height="176"/>
+	<SubTexture x="442" frameWidth="201" y="1" frameX="-12" name="RechiTv0000" frameHeight="171" frameY="-14" width="189" height="157"/>
+	<SubTexture x="1" frameWidth="225" y="1" frameX="-0" name="SugarMoon0000" frameHeight="184" frameY="-0" width="225" height="184"/>
+	<SubTexture x="634" frameWidth="199" y="1" frameX="-14" name="lemon aid0000" frameHeight="161" frameY="-36" width="185" height="125"/>
+	<SubTexture x="822" frameWidth="164" y="1" frameX="-21" name="Farsy0000" frameHeight="136" frameY="-25" width="164" height="136"/>
+</TextureAtlas>
