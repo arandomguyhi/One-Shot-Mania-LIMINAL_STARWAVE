@@ -3,11 +3,13 @@
     Author: Felipe Tovar-Henao [www.felipe-tovar-henao.com]
     Description: Animated eye mosaic using value noise, and shaping functions.
 */
+#pragma header
 
 #define PI 3.14159265359
 #define TWO_PI 6.28318530718
 #define edge 0.005
 
+uniform float iTime;
 
 /* -------- SHAPERS/MISC -------- */
 float fold(in float x) {
@@ -162,8 +164,11 @@ vec4 mk_eye(in vec2 vUV, in float b, in float t) {
     return vec4(eye);
 }
 
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
+void main()
 {
+    vec2 iResolution = openfl_TextureSize;
+    vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
+
     vec2 vUV = fragCoord.xy / iResolution.xy;
     vUV.x *= iResolution.x / iResolution.y;
     float scl = 1.75;
@@ -187,5 +192,5 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     sdf = camel_ramp(fold(sdf*(16. + sin(iTime*0.25)*2.0) - iTime*0.1), 1.0);
     sdf *= sdf;
     color = mix(color, sdf*vec4(0.000,0.000,0.000,1.0), sdf*(1.0-color.a));
-    fragColor = color;
+    gl_FragColor = color;
 }

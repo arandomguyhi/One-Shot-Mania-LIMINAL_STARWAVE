@@ -14,7 +14,7 @@ void main()
     vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
 
     vec2 uv = fragCoord/iResolution.xy;
-	vec3 video = texture(iChannel0, uv).rgb;
+	vec3 video = texture2D(iChannel0, uv).rgb;
 	float grey = (video.r + video.g + video.b) / 3.0;
 
 	grey = smoothstep(1.0, 0.0, grey);
@@ -23,7 +23,7 @@ void main()
 
   vec3 c = vec3(grey);
   vec2 ogRes = fragCoord / iResolution.xy;
-  vec4 Color1 = texture(iChannel0, ogRes);
+  vec4 Color1 = texture2D(iChannel0, ogRes);
 	c = mix(c, Color1.rgb, 1.0);
 
 	gl_FragColor = vec4(c, 1.0);

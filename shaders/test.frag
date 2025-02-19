@@ -9,8 +9,6 @@ uniform float iTime;
 #define isSETUP iFrame == 0
 #define rnd hash3( iTime )
 
-vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
-
 #define L(a,b) gl_FragColor.g+= 2e-1 / length(clamp(dot((openfl_TextureCoordv*openfl_TextureSize) - a, v=b-a)/dot(v,v), 0.0, 1.0) *v - (openfl_TextureCoordv * openfl_TextureSize) + a )
 
 // implement PhotoShop perspective transformation like interaction .. under develop

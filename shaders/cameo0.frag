@@ -1,10 +1,17 @@
 // Cole Peterson
 //https://www.shadertoy.com/view/flBSzw
-#define R iResolution.xy
+#pragma header
+
+#define R openfl_TextureSize.xy
 #define m 0.0 / R.y
 #define ss(a, b, t) smoothstep(a, b, t)
 
-void mainImage( out vec4 f, in vec2 u ){
+uniform float iTime;
+
+void main(){
+    vec2 iResolution = openfl_TextureSize;
+    vec2 u = openfl_TextureCoordv*openfl_TextureSize;
+
     float t = iTime*.25 - 1.5;
     
     vec2 uv = vec2( u - .5*R ) / R.y;
@@ -36,5 +43,5 @@ void mainImage( out vec4 f, in vec2 u ){
     
     col *= max(ss(.0, .11, abs(uv.y*.4)), .8);
     col = pow(col * 1.2, vec3(1.6));
-    f = vec4(1.-exp(-col), 1.);
+    gl_FragColor = vec4(1.-exp(-col), 1.);
 }

@@ -69,7 +69,7 @@ function onCreatePost()
     for i = 0, 3 do
         setProperty('opponentStrums.members['..i..'].alpha', 0.001)
         scaleObject('playerStrums.members['..i..']', 0.7, 0.7)
-        setProperty('playerStrums.members['..i..'].x', getProperty('arrowWindow.x') + 76 + (137 * i))
+        setProperty('playerStrums.members['..i..'].x', getProperty('arrowWindow.x') + 82 + (137 * i))
         setProperty('playerStrums.members['..i..'].y', getProperty('playerStrums.members['..i..'].y')+5)
     end
 end

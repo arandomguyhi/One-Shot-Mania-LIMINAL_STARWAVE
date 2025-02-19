@@ -1,7 +1,8 @@
 // PLENTO
 //https://www.shadertoy.com/view/MtKfWy
+#pragma header
 
-
+uniform float iTime;
 
 #define FAR 80.0
 #define DISTANCE_BIAS 0.6
@@ -20,7 +21,6 @@ float sdBox( vec3 p, vec3 b )
 
 float map(vec3 rp)
 {
- 
     float res = 0.0;
     
     vec3 pos = rp - vec3(1.0, -0.25, 4.0);
@@ -61,7 +61,6 @@ vec3 oc(vec3 p)
 
 vec3 color(vec3 ro, vec3 rd, vec3 norm, vec3 lp, float t)
 {
-    
     // Lighting
     vec3 ld = lp-ro;
     float lDist = max(length(ld), 0.001); // Light to surface distance.
@@ -120,8 +119,11 @@ float traceRef(vec3 ro, vec3 rd){
 
 
 
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
+void main()
 {
+    vec2 iResolution = openfl_TextureSize;
+    vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
+
     vec2 uv = 2.0 * vec2(fragCoord.xy - 0.5*iResolution.xy)/iResolution.y; 
  
     vec3 ro = vec3(0.0, 0.0, 0.0); 
@@ -146,7 +148,6 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     float fog = t;
     
-   
     // Reflection  
     rd = reflect(rd, norm);
     
@@ -165,6 +166,5 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
    
     col *= smoothstep(2.0, 0.29, length(uv));
     
-    fragColor = vec4(sqrt(clamp(col, 0.0, 1.0)), 1.0);
- 
+    gl_FragColor = vec4(sqrt(clamp(col, 0.0, 1.0)), 1.0);
 }
