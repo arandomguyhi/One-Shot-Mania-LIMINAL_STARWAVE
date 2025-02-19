@@ -9,10 +9,9 @@ uniform float iTime;
 #define isSETUP iFrame == 0
 #define rnd hash3( iTime )
 
-vec2 iResolution = openfl_TextureSize;
 vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
 
-#define L(a,b)  gl_FragColor.g+= 2e-1 / length( clamp( dot( fragCoord-a,v=b-a)/dot(v,v), 0.,1.) *v - fragCoord+a )
+#define L(a,b) gl_FragColor.g+= 2e-1 / length(clamp(dot((openfl_TextureCoordv*openfl_TextureSize) - a, v=b-a)/dot(v,v), 0.0, 1.0) *v - (openfl_TextureCoordv * openfl_TextureSize) + a )
 
 // implement PhotoShop perspective transformation like interaction .. under develop
 
@@ -24,7 +23,7 @@ vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
 
 // codepen version :: http://codepen.io/Omrega/pen/ONYpRb?editors=0010
 
-#define ASPECT iResolution.x / iResolution.y; 
+#define ASPECT openfl_TextureSize.x / openfl_TextureSize.y; 
 
 #define startA vec2(  1.1 ,  -1.0)
 #define startB vec2(  1.5 , 1.)
@@ -110,13 +109,13 @@ vec3 rcolor;
 
 void main()
 {
-    vec2 p = (-iResolution.xy + 2.0*fragCoord.xy)/iResolution.y;
+    vec2 p = (-openfl_TextureSize.xy + 2.0*(openfl_TextureCoordv*openfl_TextureSize).xy)/openfl_TextureSize.y;
     
     vec2 uv = invBilinear( p, a, b, c, d );
     uv.x = 1.0 - uv.x;
     uv.y = 1.0 - uv.y;
 
-    vec4 color = texture(iChannel0, uv);
+    vec4 color = texture2D(iChannel0, uv);
     gl_FragColor = color;
 }
 
