@@ -86,15 +86,13 @@ function onUpdatePost(elapsed)
     --setShaderFloat('outline', 'iTime', el)
 end
 
-local defaultZoom = 1.2
 function onEvent(name, value1, value2)
-    local nv1 = tonumber(value1)
-
     if name == 'Zoom Mult' then
+        -- ig that's it lol
         setProperty('camZoomingMult', value1)
     elseif name == 'Camera Zoom' then
         setProperty('defaultCamZoom', getProperty('defaultCamZoom') + value1)
     elseif name == 'defaultZoom' then
-        setProperty('defaultCamZoom', defaultZoom)
+        setProperty('defaultCamZoom', 1.2)
     end
 end

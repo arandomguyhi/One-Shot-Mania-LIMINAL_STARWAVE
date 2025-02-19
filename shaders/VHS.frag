@@ -6,9 +6,6 @@
 
 #define iChannel0 bitmap
 
-vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
-vec2 iResolution = openfl_TextureSize;
-
 uniform float iTime;
 
 float PHI2 = 1.324717957244746025960908854;
@@ -38,15 +35,18 @@ vec3 YIQ_to_RGB(vec3 YIQ)
 
 vec3 VHS_effect(vec2 fragCoordd, float color_fuckery)
 {
-    vec2    IQ = vec2(0,0),
-            blur_size = vec2(16, 4),
+    vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
+    vec2 iResolution = openfl_TextureSize;
+
+    vec2    IQ = vec2(0.0,0.0),
+            blur_size = vec2(16.0, 4.0),
             focal_point = blur_size * 0.5f;
     
     float   smear_factor = blur_size.x * blur_size.y;
     
     vec2    UV_Y = fragCoordd / iResolution.xy;
     
-    float a = sin_noise(UV_Y.x + iTime*iResolution.x)*2. - 1.;
+    float a = sin_noise(UV_Y.x + iTime*iResolution.x)*2.0 - 1.0;
     float b = float(sin_noise(UV_Y.y + iTime*iResolution.y) < 0.001);
     UV_Y.x += abs(a)*a*b/iResolution.x;    
 
@@ -78,5 +78,5 @@ vec3 VHS_effect(vec2 fragCoordd, float color_fuckery)
 
 void main()
 {
-    gl_FragColor = vec4(VHS_effect(fragCoord, 0.3f), 1.0);
+    gl_FragColor = vec4(VHS_effect(openfl_TextureCoordv * openfl_TextureSize, 0.3f), 1.0);
 }
